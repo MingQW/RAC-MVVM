@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginVC.h
 //  WXImitate
 //
 //  Created by WuQingMing on 16/11/19.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoginVC : UIViewController
 
 
 @end

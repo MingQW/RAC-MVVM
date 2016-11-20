@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		8243DEAB1DE0102100DBA76F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243DEAA1DE0102100DBA76F /* main.m */; };
 		8243DEAE1DE0102100DBA76F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243DEAD1DE0102100DBA76F /* AppDelegate.m */; };
-		8243DEB11DE0102100DBA76F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243DEB01DE0102100DBA76F /* ViewController.m */; };
-		8243DEB41DE0102100DBA76F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8243DEB21DE0102100DBA76F /* Main.storyboard */; };
+		8243DEB11DE0102100DBA76F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243DEB01DE0102100DBA76F /* LoginVC.m */; };
 		8243DEB61DE0102100DBA76F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8243DEB51DE0102100DBA76F /* Assets.xcassets */; };
 		8243DEB91DE0102100DBA76F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8243DEB71DE0102100DBA76F /* LaunchScreen.storyboard */; };
 		8243DEC41DE0102200DBA76F /* WXImitateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243DEC31DE0102200DBA76F /* WXImitateTests.m */; };
 		8243DECF1DE0102200DBA76F /* WXImitateUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8243DECE1DE0102200DBA76F /* WXImitateUITests.m */; };
+		8243DEDF1DE0163C00DBA76F /* LoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8243DEDE1DE0163C00DBA76F /* LoginVC.storyboard */; };
+		82ABB5731DE056F5005CAADB /* LoginVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABB5721DE056F5005CAADB /* LoginVideoModel.m */; };
+		82ABB5771DE05D32005CAADB /* AFNHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABB5761DE05D32005CAADB /* AFNHttpManager.m */; };
+		90CA013016B96160291A531A /* libPods-WXImitate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A960188135DAF9A38AD12B /* libPods-WXImitate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73A960188135DAF9A38AD12B /* libPods-WXImitate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WXImitate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8243DEA61DE0102100DBA76F /* WXImitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXImitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8243DEAA1DE0102100DBA76F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8243DEAC1DE0102100DBA76F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8243DEAD1DE0102100DBA76F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8243DEAF1DE0102100DBA76F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8243DEB01DE0102100DBA76F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8243DEB31DE0102100DBA76F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8243DEAF1DE0102100DBA76F /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		8243DEB01DE0102100DBA76F /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		8243DEB51DE0102100DBA76F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8243DEB81DE0102100DBA76F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8243DEBA1DE0102100DBA76F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +54,14 @@
 		8243DECA1DE0102200DBA76F /* WXImitateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WXImitateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8243DECE1DE0102200DBA76F /* WXImitateUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXImitateUITests.m; sourceTree = "<group>"; };
 		8243DED01DE0102200DBA76F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8243DEDE1DE0163C00DBA76F /* LoginVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginVC.storyboard; sourceTree = "<group>"; };
+		82ABB5711DE056F5005CAADB /* LoginVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVideoModel.h; sourceTree = "<group>"; };
+		82ABB5721DE056F5005CAADB /* LoginVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVideoModel.m; sourceTree = "<group>"; };
+		82ABB5741DE0571B005CAADB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		82ABB5751DE05D32005CAADB /* AFNHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHttpManager.h; sourceTree = "<group>"; };
+		82ABB5761DE05D32005CAADB /* AFNHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHttpManager.m; sourceTree = "<group>"; };
+		CD498A2095708DC6A114E3DA /* Pods-WXImitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXImitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-WXImitate/Pods-WXImitate.release.xcconfig"; sourceTree = "<group>"; };
+		DFDD1D5FDA04A4E3C810D2EC /* Pods-WXImitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WXImitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WXImitate/Pods-WXImitate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90CA013016B96160291A531A /* libPods-WXImitate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AD577BE32200B751D865937 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73A960188135DAF9A38AD12B /* libPods-WXImitate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8243DE9D1DE0102100DBA76F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,8 @@
 				8243DEC21DE0102200DBA76F /* WXImitateTests */,
 				8243DECD1DE0102200DBA76F /* WXImitateUITests */,
 				8243DEA71DE0102100DBA76F /* Products */,
+				E7D095278F56898C1CC36153 /* Pods */,
+				5AD577BE32200B751D865937 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +123,19 @@
 		8243DEA81DE0102100DBA76F /* WXImitate */ = {
 			isa = PBXGroup;
 			children = (
+				82ABB5781DE07611005CAADB /* tool */,
 				8243DEAC1DE0102100DBA76F /* AppDelegate.h */,
 				8243DEAD1DE0102100DBA76F /* AppDelegate.m */,
-				8243DEAF1DE0102100DBA76F /* ViewController.h */,
-				8243DEB01DE0102100DBA76F /* ViewController.m */,
-				8243DEB21DE0102100DBA76F /* Main.storyboard */,
+				8243DEAF1DE0102100DBA76F /* LoginVC.h */,
+				8243DEB01DE0102100DBA76F /* LoginVC.m */,
+				82ABB5711DE056F5005CAADB /* LoginVideoModel.h */,
+				82ABB5721DE056F5005CAADB /* LoginVideoModel.m */,
+				8243DEDE1DE0163C00DBA76F /* LoginVC.storyboard */,
 				8243DEB51DE0102100DBA76F /* Assets.xcassets */,
 				8243DEB71DE0102100DBA76F /* LaunchScreen.storyboard */,
 				8243DEBA1DE0102100DBA76F /* Info.plist */,
 				8243DEA91DE0102100DBA76F /* Supporting Files */,
+				82ABB5741DE0571B005CAADB /* PrefixHeader.pch */,
 			);
 			path = WXImitate;
 			sourceTree = "<group>";
@@ -140,6 +166,24 @@
 			path = WXImitateUITests;
 			sourceTree = "<group>";
 		};
+		82ABB5781DE07611005CAADB /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				82ABB5751DE05D32005CAADB /* AFNHttpManager.h */,
+				82ABB5761DE05D32005CAADB /* AFNHttpManager.m */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		E7D095278F56898C1CC36153 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD1D5FDA04A4E3C810D2EC /* Pods-WXImitate.debug.xcconfig */,
+				CD498A2095708DC6A114E3DA /* Pods-WXImitate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8243DED31DE0102200DBA76F /* Build configuration list for PBXNativeTarget "WXImitate" */;
 			buildPhases = (
+				306A4231B5567BB16C053C00 /* [CP] Check Pods Manifest.lock */,
 				8243DEA21DE0102100DBA76F /* Sources */,
 				8243DEA31DE0102100DBA76F /* Frameworks */,
 				8243DEA41DE0102100DBA76F /* Resources */,
+				09D9CC250CD0C523EFC0E3E0 /* [CP] Embed Pods Frameworks */,
+				AD885FC3F46F906032EDCB32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,9 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8243DEDF1DE0163C00DBA76F /* LoginVC.storyboard in Resources */,
 				8243DEB91DE0102100DBA76F /* LaunchScreen.storyboard in Resources */,
 				8243DEB61DE0102100DBA76F /* Assets.xcassets in Resources */,
-				8243DEB41DE0102100DBA76F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,12 +315,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09D9CC250CD0C523EFC0E3E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WXImitate/Pods-WXImitate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		306A4231B5567BB16C053C00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD885FC3F46F906032EDCB32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WXImitate/Pods-WXImitate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8243DEA21DE0102100DBA76F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8243DEB11DE0102100DBA76F /* ViewController.m in Sources */,
+				8243DEB11DE0102100DBA76F /* LoginVC.m in Sources */,
+				82ABB5771DE05D32005CAADB /* AFNHttpManager.m in Sources */,
+				82ABB5731DE056F5005CAADB /* LoginVideoModel.m in Sources */,
 				8243DEAE1DE0102100DBA76F /* AppDelegate.m in Sources */,
 				8243DEAB1DE0102100DBA76F /* main.m in Sources */,
 			);
@@ -311,14 +408,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8243DEB21DE0102100DBA76F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8243DEB31DE0102100DBA76F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8243DEB71DE0102100DBA76F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -420,8 +509,10 @@
 		};
 		8243DED41DE0102200DBA76F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFDD1D5FDA04A4E3C810D2EC /* Pods-WXImitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = WXImitate/PrefixHeader.pch;
 				INFOPLIST_FILE = WXImitate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WQM.WXImitate;
@@ -431,8 +522,10 @@
 		};
 		8243DED51DE0102200DBA76F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD498A2095708DC6A114E3DA /* Pods-WXImitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = WXImitate/PrefixHeader.pch;
 				INFOPLIST_FILE = WXImitate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WQM.WXImitate;
@@ -505,6 +598,7 @@
 				8243DED51DE0102200DBA76F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8243DED61DE0102200DBA76F /* Build configuration list for PBXNativeTarget "WXImitateTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +607,7 @@
 				8243DED81DE0102200DBA76F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8243DED91DE0102200DBA76F /* Build configuration list for PBXNativeTarget "WXImitateUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +616,7 @@
 				8243DEDB1DE0102200DBA76F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
