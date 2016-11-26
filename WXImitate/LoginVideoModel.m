@@ -10,7 +10,6 @@
 #import "AFNHttpManager.h"
 
 @interface LoginVideoModel()
-@property(nonatomic, strong) RACSignal *loginSignal;
 @property(nonatomic, strong) RACSignal *loginValidSignal;
 @end
 
@@ -18,13 +17,13 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        [self loginCommandStateToStatusMessage];
+        [self loginCommandStatus];
     }
     
     return self;
 }
 
-- (void)loginCommandStateToStatusMessage {
+- (void)loginCommandStatus {
     RACSignal *startedMessageSource = [self.loginCommand.executionSignals map:^id(RACSignal *subscribeSignal) {
         return @1;
     }];
@@ -32,7 +31,7 @@
     RACSignal *completedMessageSource = [self.loginCommand.executionSignals flattenMap:^RACStream *(RACSignal *subscribeSignal) {
         return [[[subscribeSignal materialize] filter:^BOOL(RACEvent *event) {
             return (event.eventType == RACEventTypeCompleted);
-        }] map:^id(id value) {
+        }] map:^id(NSNumber *value) {
             if ([value isEqual: @2]) {
                 return @2;
             }
@@ -45,41 +44,35 @@
         return @3;
     }];
     
-    [RACObserve(self.loginCommand, errors) subscribeNext:^(id x) {
-        NSLog(@"x = %@", x);
-    }];
     RAC(self, rcLoginStatus) = [RACSignal merge:@[startedMessageSource, completedMessageSource, failedMessageSource]];
 }
 
 - (RACCommand *)loginCommand {
     if (!_loginCommand) {
-        @weakify(self);
         _loginCommand = [[RACCommand alloc] initWithEnabled:self.loginValidSignal signalBlock:^RACSignal *(id input) {
-           return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-               @strongify(self);
-               NSDictionary *parameter = @{@"acount": @"", @"pwd": self.password};
-               [AFNHttpManager getInfoWithUrl:@"" parameter:parameter complition:^(id json, NSError *error) {
-                   if (error) {
-                       [subscriber sendError:error];
-                   }
-                   else {
-                       [subscriber sendNext:@"2"];
-                   }
-                   [subscriber sendCompleted];
-               }];
-               
-               return nil;
-            }];
+            return [self createLoginSignal];
         }];
     }
     
     return _loginCommand;
 }
 
-- (void) loginWithAcount:(NSString *)acount andPassWord:(NSString *)pwd {
-    NSDictionary *parameter = @{@"acount": acount, @"pwd": pwd};
-    [AFNHttpManager getInfoWithUrl:@"" parameter:parameter complition:^(id json, NSError *eror) {
-        NSLog(@"eror = %@", eror);
+- (RACSignal *)createLoginSignal {
+    @weakify(self);
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        NSDictionary *parameter = @{@"acount": @"", @"pwd": self.password};
+        [AFNHttpManager getInfoWithUrl:@"" parameter:parameter complition:^(id json, NSError *error) {
+            if (error) {
+                [subscriber sendError:error];
+            }
+            else {
+                [subscriber sendNext:@"2"];
+            }
+            [subscriber sendCompleted];
+        }];
+        
+        return nil;
     }];
 }
 
@@ -89,6 +82,7 @@
             return @(pwd.length > 0);
         }];
     }
+    
     return _loginValidSignal;
 }
 
